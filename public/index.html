@@ -27,7 +27,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
     <script>
-      const socket = io.connect("http://44.225.181.72:10000");
+      const socket = io.connect("http://localhost:3000");
 
       // Event handler for successful connection
       socket.on("connect", () => {
@@ -39,7 +39,7 @@
         console.log("Disconnected from server");
       });
 
-      // Event handler for client count  
+      // Event handler for client count
       socket.on("client count", (count) => {
         document.getElementById("clientCount").textContent = count;
       });
